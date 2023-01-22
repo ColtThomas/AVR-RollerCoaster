@@ -1,6 +1,12 @@
 # AVR-RollerCoaster
 IOT project that collects accelerometer and GPS data to send to Flask server via LTE modem. Runs on an AVR-IOT Cellular Mini dev board.
 
+# Hardware Used
+
+* [Adafruit Ultimate GPS Featherwing](https://learn.adafruit.com/adafruit-ultimate-gps-featherwing) - I recommend using a coin cell battery for faster GPS lock
+* [SparkFun 9DoF IMU Breakout - ISM330DHCX, MMC5983MA](https://www.sparkfun.com/products/19895) - NOTE: This includes both an accelerometer/gyroscope and magnetometer. You could alternatively use just the [6DoF IMU breakout board](https://www.sparkfun.com/products/19764) that only has the accelerometer/gyroscope.
+* 32db High Gain Cirocomm 5cm Active GPS Antenna Ceramic Antenna. The model I used is an older model (510). [Here's a link to a newer model](http://www.cirocomm.com/en-global/products_ciro/detail/GBA-154C) This was helpful for acquiring a fast GPS lock. Without the active antenna and no cell battery, it took about 15-30 minutes to acquire a lock every powercycle. With this antenna and a battery it was almost instantaneous.
+
 # Dependencies
 
 Below are the Arduino library dependencies that are needed:
